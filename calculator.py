@@ -18,5 +18,5 @@ if __name__ == "__main__":
     print(f"Numbers: {a}, {b}")
     print("Add:", add(a, b))
     print("Subtract:", subtract(a, b))
-    print("Multiply:", multiply(a, c))
+    print("Multiply:", multiply(a, b))
     print("Divide:", divide(a, b))
