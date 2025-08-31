@@ -1,0 +1,21 @@
+name: Calculator Workflow
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-run:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build Docker image
+        run: docker build -t calculator-app .
+
+      - name: Run Calculator
+        run: docker run --rm calculator-app
